@@ -282,6 +282,14 @@
 	var ambientLight = new THREE.AmbientLight(0x111111);
 	scene.add(ambientLight);
 
+	/////////
+	// SKY //
+	/////////
+	var skyBoxGeometry = new THREE.CubeGeometry( 10000, 10000, 10000 );
+	var skyBoxMaterial = new THREE.MeshBasicMaterial( { color: 'black', side: THREE.BackSide } );
+	var skyBox = new THREE.Mesh( skyBoxGeometry, skyBoxMaterial );
+	scene.add(skyBox);
+
 	/////////////////////
 	// Particle system //
 	/////////////////////
